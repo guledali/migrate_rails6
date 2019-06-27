@@ -5,4 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :submissions
+
+  validates_uniqueness_of :username
+  validates_presence_of :username
 end

@@ -9,4 +9,5 @@ require("@rails/activestorage").start()
 require("channels")
 //require("stylesheets/application.scss"); 
 
+import "../components/tabs"
 import "stylesheets/application";

@@ -1,25 +1,20 @@
-<p>
-  <strong>Title:</strong>
+
   <%= @submission.title %>
-</p>
 
-<p>
-  <strong>Body:</strong>
+
+
   <%= @submission.body %>
-</p>
 
-<p>
-  <strong>Url:</strong>
+
+
   <%= @submission.url %>
-</p>
 
 
-<%= debug(@submission.submission_image.large.url) %>
 
-<p>
-  <strong>Submission image</strong>
-  <%= image_tag (@submission.submission_image.large.url), width: 400 %>
-</p>
+<%#= debug(@submission.submission_image.large.url) %>
+
+
+<%= image_tag @submission.submission_image.large.url, width: 400 if @submission.submission_image.present?  %>
 
 
 <%= link_to 'Edit', edit_submission_path(@submission) %> |

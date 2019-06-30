@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Webbit</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+ 
+
     <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,500,600,700' %>
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "https://js.stripe.com/v3" %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= tag :meta, name: "stripe-key", content: Rails.application.credentials.stripe_publishable_key %>
+
+    <%= yield :head %>
+
   </head>
 
   <body class="bg-gray-200 relative h-screen overflow-x-hidden">
@@ -46,11 +54,8 @@
                 <option>Community 2</option>
                 <option>Community 3</option>
             </select>
-            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-              <%= render_svg('icons/chevron-down') %> 
             </div>
           </div>
-        </div>
 
           <div class="w-full lg:w-1/2 px-0 md:px-2">
             <div class="relative">

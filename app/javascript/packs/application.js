@@ -10,4 +10,5 @@ require("channels")
 //require("stylesheets/application.scss"); 
 
 import "../components/tabs"
+import "../components/dropdown"
 import "stylesheets/application";

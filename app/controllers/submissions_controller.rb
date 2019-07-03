@@ -70,6 +70,6 @@ class SubmissionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def submission_params
-      params.require(:submission).permit(:title, :body, :url, :submission_image, :submission_video)
+      params.require(:submission).permit(:title, :body, :url, :submission_image, :submission_video, :community_id)
     end
 end

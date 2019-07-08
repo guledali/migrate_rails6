@@ -1,24 +1,16 @@
-<p id="notice"><%= notice %></p>
+<% content_for :community_label, "w/#{@community.name}" %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @community.name %>
-</p>
+<%= render "community_header", community: @community %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @community.title %>
-</p>
+<% content_for :primary_content do %>
+  <% @community.submissions.each_with_index do |submission, index| %>
+    <%#= inject_feed_ad(index) unless active_subscriber? %>
+    <%= render "submissions/submission", submission: submission %>
+  <% end %>
+<% end %>
 
-<p>
-  <strong>Description:</strong>
-  <%= @community.description %>
-</p>
+<% content_for :secondary_content do %>
+  <%= render "sidebar", community: @community %>
+<% end %>
 
-<p>
-  <strong>Sidebar:</strong>
-  <%= @community.sidebar %>
-</p>
-
-<%= link_to 'Edit', edit_community_path(@community) %> |
-<%= link_to 'Back', communities_path %>
+<%= render "basic_layout" %>

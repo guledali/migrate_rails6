@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!-- <% content_for :community_label, "All Communities" %>
 
 <h1>Communities</h1>
 
@@ -30,4 +30,21 @@
 
 <br>
 
-<%= link_to 'New Community', new_community_path %>
+<%= link_to 'New Community', new_community_path %> -->
+
+<% content_for :community_label, "All Communities" %>
+
+<% content_for :primary_content do %>
+  <div class="lg:p-10 pt-10 pb-10 px-4">
+    <h1 class="text-xl font-normal mb-6">Communities</h1>
+    <%= render @communities %>
+  </div>
+<% end %>
+
+<% content_for :secondary_content do %>
+  <div class="px-8 pt-6 pb-8">
+    <%= link_to "New Community", new_community_path if user_signed_in? %>
+  </div>
+<% end %>
+
+<%= render "basic_layout" %>

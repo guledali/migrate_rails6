@@ -9,4 +9,8 @@ module ApplicationHelper
     def current_user
         super
     end
+
+    def author_of(record)
+        user_signed_in? && current_user.id === record.user_id
+    end
 end

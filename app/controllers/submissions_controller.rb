@@ -5,13 +5,18 @@ class SubmissionsController < ApplicationController
   # GET /submissions
   # GET /submissions.json
   def index
-    @submissions = Submission.all
+    if user_signed_in?
+      @submissions = current_user.subscribed_submissions
+    else
+      @submissions = Submission.all
+    end
   end
 
   # GET /submissions/1
   # GET /submissions/1.json
   def show
     @comment = Comment.new
+    @community = @submission.community
   end
 
   # GET /submissions/new

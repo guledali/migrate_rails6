@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="698c28c6-0259-4b5d-8f59-c3223ee7720f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/subscriptions_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/subscriptions/_subscribed.js.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/subscriptions/_subscription.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/subscriptions/create.js.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/subscriptions/destroy.js.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/submissions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/submissions_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/community.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/community.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/communities/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/communities/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/communities/_sidebar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/communities/_sidebar.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/submissions/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/submissions/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/submission.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/submission.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/submissions/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/submissions/show.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -76,33 +65,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/subscriptions/create.js.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="26" selection-start-column="26" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/subscriptions/_subscribed.js.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/subscriptions/_subscription.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/submissions_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
@@ -120,11 +82,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/communities/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
+            <state relative-caret-position="598">
               <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/submissions/_submission.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/submission.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="371">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/submissions/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -137,6 +126,7 @@
       <find>hr</find>
       <find>border</find>
       <find>text</find>
+      <find>leading</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -170,7 +160,6 @@
         <option value="$PROJECT_DIR$/db/migrate/20190709103305_add_user_ref_to_comments.rb" />
         <option value="$PROJECT_DIR$/app/views/comments/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/comments/create.js.erb" />
-        <option value="$PROJECT_DIR$/app/views/submissions/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/comments/edit.js.erb" />
         <option value="$PROJECT_DIR$/app/views/comments/_modal.html.erb" />
         <option value="$PROJECT_DIR$/app/javascript/components/modal.js" />
@@ -195,7 +184,6 @@
         <option value="$PROJECT_DIR$/app/views/comments/_voting.html.erb" />
         <option value="$PROJECT_DIR$/app/views/comments/_comment.html.erb" />
         <option value="$PROJECT_DIR$/app/views/submissions/_voting.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/submission.rb" />
         <option value="$PROJECT_DIR$/app/models/comment.rb" />
         <option value="$PROJECT_DIR$/app/models/concerns/votes_countable.rb" />
         <option value="$PROJECT_DIR$/app/views/comments/_vote.js.erb" />
@@ -215,6 +203,8 @@
         <option value="$PROJECT_DIR$/app/controllers/submissions_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/submissions/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/communities/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/submission.rb" />
+        <option value="$PROJECT_DIR$/app/views/submissions/show.html.erb" />
       </list>
     </option>
   </component>
@@ -342,13 +332,6 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="submissions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webbit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webbit" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="subscriptions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webbit" type="b2602c69:ProjectViewProjectNode" />
@@ -508,12 +491,12 @@
       <workItem from="1562311090428" duration="48000" />
       <workItem from="1562584321992" duration="3854000" />
       <workItem from="1562658452155" duration="12279000" />
-      <workItem from="1563274811228" duration="10674000" />
+      <workItem from="1563274811228" duration="12527000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59471000" />
+    <option name="totallyTimeSpent" value="61324000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -557,20 +540,6 @@
     <SUITE FILE_PATH="coverage/webbit@Development__webbit.rcov" NAME="Development: webbit Coverage Results" MODIFIED="1561836082269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="webbit" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/comments/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/comments/create.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/comments/edit.js.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -700,20 +669,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/submissions/_submission.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/submissions/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1690">
-          <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
@@ -819,13 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/submission.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/subscription.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -908,8 +856,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/communities/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
+        <state relative-caret-position="598">
           <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activemodel-6.0.0.rc1/lib/active_model/validations.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="151" column="10" selection-start-line="151" selection-start-column="10" selection-end-line="151" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activesupport-6.0.0.rc1/lib/active_support/core_ext/object/blank.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="120" column="6" selection-start-line="120" selection-start-column="6" selection-end-line="120" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/submission.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/submissions/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/submissions/_submission.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
         </state>
       </provider>
     </entry>

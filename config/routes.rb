@@ -1,7 +1,12 @@
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
+  mount Sidekiq::Web => '/sidekiq'
   resources :communities do
     resource :subscriptions
   end
+
+  get 'submissions/unsubscribe/:unsubscribe_hash' => 'submissions#unsubscribe', :as => 'comment_unsubscribe'
 
   resources :submissions do
     member do

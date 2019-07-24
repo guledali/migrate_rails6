@@ -15,4 +15,9 @@ class User < ApplicationRecord
   has_many :subscribed_submissions, through: :communities, source: :submissions
 
   acts_as_voter
+
+  private
+    def add_unsubscribe_hash
+      self.unsubscribe_hash = SecureRandom.hex
+    end
 end

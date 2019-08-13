@@ -7,6 +7,7 @@ class Submission < ApplicationRecord
     belongs_to :community
 
     has_many :comments, dependent: :destroy
+    has_rich_text :body
 
     validates :title, presence: true
     validates :body, length: { maximum: 8000 }

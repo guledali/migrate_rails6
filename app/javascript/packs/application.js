@@ -7,9 +7,11 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-//require("stylesheets/application.scss"); 
+//require("stylesheets/application.scss");
 
 import "../components/tabs"
 import "../components/dropdown"
 import "../components/modal"
 import "stylesheets/application";
+require("trix")
+require("@rails/actiontext")

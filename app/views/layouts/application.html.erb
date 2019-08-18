@@ -62,11 +62,14 @@
 
           <div class="w-full lg:w-1/2 px-0 md:px-2">
             <div class="relative">
-                <input class="input pl-10" id="search" type="text" placeholder="Search Webbit" />
+              <%= form_tag search_path, method: :get do %>
+                  <%= text_field_tag :q, nil, id: "search", placeholder: "Search Webbit", class: "input pl-10 py-3"%>
+<!--                <input class="input pl-10" id="search" type="text" placeholder="Search Webbit" />-->
                 <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center px-3 text-gray-700">
                     <%= render_svg('icons/search', styles:"fill-current h-4 w-4") %> 
                 </div>
             </div>
+            <% end %>
           </div>
         </div>
 

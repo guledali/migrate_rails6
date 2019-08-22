@@ -32,7 +32,7 @@
 
 <% content_for :secondary_content do %>
   <div class="p-4 text-center">
-    <%= gravatar_for(@user) %>
+    <%= gravatar_for(@user, styles: "inline-block rounded-full") %>
     <h3><%= @user.username %></h3>
     <div class="italic text-sm text-gray-600">Joined <%= time_ago_in_words(@user.created_at) %> ago</div>
 

@@ -17,6 +17,9 @@ class Submission < ApplicationRecord
 
     acts_as_votable
 
+    extend FriendlyId
+    friendly_id :title, use: :slugged
+
     private
 
     def image_or_video

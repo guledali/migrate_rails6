@@ -38,6 +38,8 @@ gem 'acts_as_votable', '~> 0.12.0'
 gem 'sidekiq', '~> 5.2', '>= 5.2.5'
 gem 'ransack', '~> 2.1', '>= 2.1.1'
 gem 'stripe', '~> 5.0', '>= 5.0.1'
+gem 'friendly_id', '~> 5.2', '>= 5.2.5'
+gem 'meta-tags', '~> 2.11', '>= 2.11.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

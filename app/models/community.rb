@@ -7,6 +7,9 @@ class Community < ApplicationRecord
 
   before_save :format_name
 
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
   def format_name
     self.name.titleize
     self.name.gsub!(' ','')

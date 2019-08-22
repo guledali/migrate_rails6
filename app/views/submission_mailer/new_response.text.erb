@@ -1,0 +1,8 @@
+Hey <%= @submission.user.username %>,
+
+Your submission <%= @submission.title %> received a response.
+
+New comment:
+<%= @comment.reply %>
+
+<%= link_to 'Unsubscribe', comment_unsubscribe_url(@submission.user.unsubscribe_hash) %>

@@ -1,0 +1,69 @@
+<% title @submission.title %>
+<% content_for :community_label, @submission.community.name %>
+
+<%= render 'communities/community_header', community: @submission.community %>
+
+<%= content_for :primary_content do %>
+  <div id="submission-<%= @submission.id %>" class="p-4 pb-10 pr-6">
+    <div class="flex flex-row flex-wrap items-start justify-between">
+
+      <div class="submission-voting text-xs pr-2">
+        <%= render 'voting', submission: @submission %>
+      </div>
+
+      <div class="submission-content">
+        <%= render 'posted_by', submission: @submission %>
+
+        <h1 class="text-xl"><%= @submission.title %></h1>
+
+        <div class="leading-normal text-base text-gray-800 lg:pr-6 pb-5 border-b border-gray-200 mb-2">
+
+          <%= image_tag @submission.submission_image.large.url, class: "max-w-full my-2" if @submission.submission_image.present? %>
+
+          <%= video_tag @submission.submission_video.url, class: "max-w-full my-2", controls: true if @submission.submission_video.present? %>
+
+          <% if @submission.url.present? %>
+            <div class="p-3 border rounded my-2 flex justify-center items-center">
+              <%= render_svg 'icons/link', styles: "mr-2 text-gray-600 fill-current" %>
+              <%= link_to @submission.url, @submission.url, class: "lg:text-xl text-lg no-underline" %>
+            </div>
+          <% end %>
+
+          <%= @submission.body if @submission.body %>
+        </div>
+
+        <%= render 'actions', submission: @submission %>
+
+        <% unless user_signed_in? %>
+          <div class="bg-gray-200 rounded p-4 mt-4 text-center">
+            <p class="text-sm text-gray-600"><%= link_to "Login", new_user_session_path, class: "link" %> or <%= link_to "Sign up", new_user_registration_path, class: "link" %> to comment.</p>
+          </div>
+        <% else %>
+          <%= render 'comments/form' %>
+        <% end %>
+
+        <div id="comments" class="mt-6 border-t border-gray-400">
+          <%= render @submission.comments %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<%= content_for :secondary_content do %>
+  <%= render 'communities/sidebar', community: @submission.community %>
+<% end %>
+
+<%= render 'basic_layout' %>
+
+<div id="edit-comment">
+  <div class="modal">
+    <div class="max-w-lg m-auto mt-5 bg-white p-10 pt-4 relative rounded-lg shadow-lg">
+      <button class="js-close-modal absolute pin-t pin-r mr-4 mt-4 ">
+        <%= render_svg 'icons/close', styles: "icon-md fill-current text-gray-500" %>
+      </button>
+      <div class="modal-inner"></div>
+    </div>
+  </div>
+</div>

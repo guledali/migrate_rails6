@@ -1,0 +1,41 @@
+<div id="submission-<%= submission.id %>" class="border-b border-r border-l">
+  <div class="px-2 pt-2 pb-2 flex items-start flex-wrap">
+    <div class="submission-voting text-xs pr-2">
+      <%= render "submissions/voting", submission: submission %>
+    </div>
+
+    <div>
+      <%= link_to submission do %>
+        <%= image_tag submission.submission_image.large.url, class: "lg:w-24 w-full max-w-full h-16 object-cover object-center" %>
+      <% end if submission.submission_image.present? %>
+
+      <%= link_to submission do %>
+        <%= video_tag submission.submission_video.url, class:"lg:w-24 w-full max-w-full"  %>
+      <% end if submission.submission_video.present? %>
+    </div>
+
+    <div class="flex items-start flex-1 pl-4">
+      <div class="flex-1 w-full">
+        <h3 class="mb-0 flex flex-wrap items-center text-base">
+          <% submission_link = submission.url.present? ? submission.url : submission %>
+          <%= link_to submission.title, submission_link, class: "no-underline font-semibold" %>
+
+          <% if submission.url %>
+            <span class="pl-2 text-xs font-normal font-mono text-blue-400 tracking-tighter">
+              <%= link_to truncate(submission.url, length: 18), submission.url, class: "no-underline" %>
+            </span>
+          <% end %>
+        </h3>
+
+        <%= link_to community_path(submission.community), class: "no-underline text-gray-700 font-normal hover:text-gray-700 hover:underline text-sm inline-block" do %>
+          w/<%= submission.community.name %>
+        <% end %>
+
+        <span class="mx-1 inline-block text-sm text-gray-700">•</span>
+
+        <%= render "submissions/posted_by", submission: submission %>
+        <%= render "submissions/actions", submission: submission %>
+      </div>
+    </div>
+  </div>
+</div>

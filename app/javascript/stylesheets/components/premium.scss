@@ -1,0 +1,21 @@
+.StripeElement {
+  box-sizing: border-box;
+  height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.StripeElement--focus {
+  //@apply border-purple;
+  border-color: #b794f4;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}

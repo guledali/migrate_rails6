@@ -1,0 +1,24 @@
+<% content_for :head do %>
+  <%= javascript_pack_tag "premium" %>
+<% end %>
+
+<div class="bg-white max-w-4xl rounded-lg border border-gray-400 p-6 m-auto mt-10 flex flex-wrap items-start justify-between">
+  <div class="lg:w-1/2 text-center">
+    <%= image_tag "premium-illustration.svg", width: 400, class: "max-w-full" %>
+  </div>
+  <div class="lg:w-1/2 lg:px-10">
+    <h1 class="text-2xl pt-4 text-gray-900 leading-tighter mb-2">Subscribe to Webbit Premium</h1>
+    <p class="text-gray-700">Go premium to use Webbit ad-free.</p>
+    <%= form_tag('/premium', id: "payment-form") do |form| %>
+      <div class="field mb-10 mt-6">
+        <label for="card-element" class="label mb-2">Enter credit or debit card</label>
+        <div id="card-element">
+          <%# A Stripe element will be inserted here %>
+        </div>
+
+        <div id="card-errors" role="alert" class="text-red-500 text-sm"></div>
+        <button class="btn-green btn mt-6 block w-full">Subscribe $6/mo</button>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<% title "Submissions" %>
+<% content_for :community_label, "My Feed" %>
+<% content_for :primary_content do %>
+
+        <% if @submissions.exists? %>
+           <% @submissions.each_with_index do |submission, index| %>
+              <%= inject_feed_ad(index) unless active_subscriber?  %>
+              <%= render "submissions/submission", submission: submission %>
+              <%# render @submissions %>
+              <% end %>
+            <% else %>
+              <div class="p-10 text-center">
+                  <%= render_svg("icons/empty") %>
+                  <p class="mb-4">Wow such empty...</p>
+                  <%= link_to "Create new submission", new_submission_path, class: "btn btn-purple btn-small" %>
+              </div>
+            <% end %>
+          <% end %>
+
+<% content_for :secondary_content do %>
+  <div class="px-8 pt-6 pb-8">
+    <% unless user_signed_in? %>
+        <%= image_tag "illustration.svg", class: "max-w-full" %>
+        <h3>Explore</h3>
+        <p class="text-gray-600 text-sm">Find your breaking news, sports, TV fan theories, or never-ending streams of cute animals</p>
+      <%= link_to "How Webbit works", "#", class: "btn btn-small btn-white my-2 block text-center"  %>
+      <% else %>
+      <p class="text-gray-600 text-sm">Your personal Webbit frontpage. Come here to check in with your favorite communities.</p>
+      <%= link_to 'New Submission', new_submission_path, class: "btn btn-small btn-purple my-2 block text-center" %>
+      <%= link_to "New Community", new_community_path, class: "btn btn-small btn-white my-2 block text-center"  %>
+    <% end %>
+  </div>
+<% end %>
+
+
+<%= render "basic_layout" %>

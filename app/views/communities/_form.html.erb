@@ -1,0 +1,40 @@
+<%= form_with(model: community, local: true) do |form| %>
+  <% if community.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(community.errors.count, "error") %>
+        prohibited this community from being saved:</h2>
+      <ul>
+        <% community.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-6">
+    <%= form.label :name, class: "label" %>
+    <%= form.text_field :name, class: "input" %>
+  </div>
+
+  <div class="mb-6">
+    <%= form.label :title, class: "label" %>
+    <%= form.text_field :title, class: "input" %>
+  </div>
+
+  <div class="mb-6">
+    <%= form.label :description, class: "label" %>
+    <%= form.text_area :description, class: "input" %>
+  </div>
+
+  <div class="mb-6">
+    <%= form.label :sidebar, class: "label" %>
+    <%= form.text_area :sidebar, class: "input" %>
+  </div>
+
+  <!-- add the line below -->
+  <%= form.hidden_field :user_id, value: current_user.id  if user_signed_in? %>
+
+  <div class="mb-6">
+    <%= form.submit class: "btn btn-purple" %>
+  </div>
+<% end %>

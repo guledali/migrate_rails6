@@ -2,7 +2,11 @@
 <% content_for :primary_content do %>
 
         <% if @submissions.exists? %>
-          <% render @submissions %>
+           <% @submissions.each_with_index do |submission, index| %>
+              <%= inject_feed_ad(index) unless active_subscriber?  %>
+              <%= render "submissions/submission", submission: submission %>
+              <%# render @submissions %>
+              <% end %>
             <% else %>
               <div class="p-10 text-center">
                   <%= render_svg("icons/empty") %>

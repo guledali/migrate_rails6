@@ -10,4 +10,14 @@ module ApplicationHelper
         super
     end
 
+    def inject_feed_ad(index)
+        if((index + 1) % 3 == 0 )
+            render "application/feed_ad"
+        end
+    end
+
+    def active_subscriber?
+        user_signed_in? && current_user.subscribed?
+    end
+
 end

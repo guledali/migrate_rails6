@@ -4,10 +4,15 @@
     <title>Webbit</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,500,600,700' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "https://js.stripe.com/v3/" %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= yield :head %>
+    <%= tag :meta, name: "stripe-key", content: Rails.application.credentials.stripe_publishable_key %>
+
   </head>
 
   <body class="bg-gray-200 relative h-screen overflow-x-hidden">

@@ -37,6 +37,8 @@ gem 'valid_url', '~> 0.0.4'
 gem 'acts_as_votable', '~> 0.12.0'
 gem 'sidekiq', '~> 5.2', '>= 5.2.5'
 gem 'ransack', '~> 2.1', '>= 2.1.1'
+gem 'stripe', '~> 5.0', '>= 5.0.1'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

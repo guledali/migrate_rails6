@@ -47,6 +47,21 @@
       <%= f.label :comment_subscription, "Recieve replies to comments via email", class: "inline-block" %>
     </div>
 
+    <% if current_user.subscribed? %>
+      <div class="mb-6 bg-gray-200 p-8 border-t border-b border-gray-400 -mx-8">
+        <h3 class="mb-2">Webbit Premium</h3>
+        <p class="mb-4">Thank you for being an active subscriber to Webbit Premium. You can manage your subscription below.</p>
+        <h5 class="uppercase tracking-wide text-gray-700 text-sm font-light mb-2">Last card used</h5>
+        <ul class="list-reset mb-4">
+          <li class="mb-2"><span class="label mb-0">Last 4 digits</span> <%= current_user.card_last4 %></li>
+          <li class="mb-2"><span class="label mb-0">Card Type</span><%= current_user.card_type %></li>
+          <li class="mb-2"><span class="label mb-0">Expiration</span><%= current_user.card_exp_month %> / <%= current_user.card_exp_year %></li>
+        </ul>
+
+        <%= link_to "Unsubscribe", premium_path(current_user), method: :delete, data: { confirm: "Are you sure you want to unsubscribe?" }, class: "btn btn-small bg-red-600 text-white inline-block" %>
+      </div>
+    <% end %>
+
     <div class="mb-6">
       <%= f.submit "Update", class: "btn btn-purple" %>
     </div>
